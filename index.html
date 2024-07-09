@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+            margin: 0;
+        }
+
+        #birthdayButton {
+            font-size: 25px;
+            font: 600;
+            padding: 30px 40px;
+            cursor: pointer;
+            background-color: #06060605;
+            color: #fcf8f8;
+            border: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        #birthdayButton:hover {
+            background-color: #fa8080;
+        }
+
+        #birthdayMessage {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .emoji {
+            font-size: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="birthdayButton" onclick="showBirthdayMessage()">Click to open🎁....</button>
+
+    <script>
+        function showBirthdayMessage() {
+            var messageDiv = document.getElementById('birthdayButton');
+            messageDiv.style.display = 'block';
+
+            setTimeout(function() {
+                window.open('index1.html', '_blank');
+            }, 700);
+        }
+    </script>
+</body>
+</html>
